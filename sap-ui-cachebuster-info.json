@@ -1,10 +1,10 @@
 {
-  "MyApp/webapp/view/App.view.xml": "1464746755000",
-  "MyApp/webapp/index.html": "1464588371000",
-  "MyApp/webapp/controller/App.controller.js": "1464740598000",
-  "MyApp/webapp/Component.js": "1464588304000",
-  "MyApp/webapp/manifest.json": "1464747230000",
-  "MyApp/webapp/model/HelloPanel.json": "1464589239000",
-  "MyApp/webapp/model/Address.json": "1464743973000",
-  "MyApp/webapp/i18n/i18n.properties": "1464746795000"
+  "webapp/model/Address.json": "1464750575000",
+  "webapp/model/HelloPanel.json": "1464750575000",
+  "webapp/view/App.view.xml": "1464750575000",
+  "webapp/manifest.json": "1464747230000",
+  "webapp/Component.js": "1464750575000",
+  "webapp/i18n/i18n.properties": "1464750575000",
+  "webapp/controller/App.controller.js": "1464750575000",
+  "webapp/index.html": "1464750575000"
 }
