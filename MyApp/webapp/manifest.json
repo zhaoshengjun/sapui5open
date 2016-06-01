@@ -8,6 +8,15 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources":{
+			"ES4": {
+				"uri":"/destinations/ES4/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type":"OData",
+				"settings":{
+					"odataVersion":"2.0"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -43,6 +52,9 @@
 			"helloPanel": {
 				"type":"sap.ui.model.json.JSONModel",
 				"uri":"model/HelloPanel.json"
+			},
+			"":{
+				"dataSource": "ES4"
 			}
 		},
 		"autoPrefixId": true,
