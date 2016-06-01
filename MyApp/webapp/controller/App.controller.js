@@ -6,7 +6,12 @@ sap.ui.define(
 	function(Controller, MessageToast) {
 		return Controller.extend("opensap.myapp.controller.App", {
 			onShowHello: function() {
-				MessageToast.show("Hello OpenSAP");
+				// MessageToast.show("Hello OpenSAP");
+				var oBundle = this.getView().getModel("i18n").getResouceBundle();
+				var sRecipient = this.getView().getModel("helloPanel").getProperty("/recipient/name");
+				var sMsg = oBundle.getText("helloMsg",[sRecipient]);
+				
+				MessageToast.show(sMsg);
 			}
 		});
 	});
