@@ -78,9 +78,21 @@
 								>
 								<content>
 									<List
-										headerText="{i18n>productListTitle}"
-										items="{/ProductSet}"
-										>
+										id="productList"
+										items="{
+											path: '/ProductSet',
+											sorter: {
+												path: 'Category',
+												group: true
+											}
+										}">
+										<headerToolbar>
+											<Toolbar>
+												<Title text="{i18n>productListTitle}"></Title>
+												<ToolbarSpacer />
+												<SearchField width="50%" search="onFilterProducts" />	
+											</Toolbar>
+										</headerToolbar>
 										<items>
 											<ObjectListItem
 												title="{Name}"
