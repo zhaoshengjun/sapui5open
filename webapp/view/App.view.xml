@@ -85,7 +85,11 @@
 												path: 'Category',
 												group: true
 											}
-										}">
+										}"
+										growing="true"
+										growingThreshold="5"
+										growingScrollToLoad="false"
+										>
 										<headerToolbar>
 											<Toolbar>
 												<Title text="{i18n>productListTitle}"></Title>
@@ -108,6 +112,8 @@
 												}" 
 												numberState="{=${Price}>500 ? 'Error' : 'Success'}"
 												intro="{ProductID}"
+												press="onItemSelected"
+												type="Active"
 												>
 												<firstStatus>
 													<ObjectStatus text="{
@@ -121,6 +127,14 @@
 											</ObjectListItem>
 										</items>
 									</List>
+									<Panel id="productDetailsPanel" headerText="{i18n>panelHeader}" visible="true">
+										<l:Grid>
+											<Text text="{i18n>ProductID}: {ProductID}" />
+											<Text text="{i18n>ProductName}: {Name}" />
+											<Text text="{i18n>Description}: \n {Description}" />
+											<Text text="{i18n>Price}: {Price}" />
+										</l:Grid>
+									</Panel>
 								</content>
 							</IconTabFilter>
 						</items>
