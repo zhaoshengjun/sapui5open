@@ -84,11 +84,15 @@
 											sorter: {
 												path: 'Category',
 												group: true
+											},
+											parameters: {
+												expand: 'ToSupplier'
 											}
 										}"
 										growing="true"
 										growingThreshold="5"
 										growingScrollToLoad="false"
+										
 										>
 										<headerToolbar>
 											<Toolbar>
@@ -124,10 +128,16 @@
 														formatter : '.formatter.delivery'
 														}"/>
 												</firstStatus>
+												<secondStatus>
+													<ObjectStatus
+														title="{i18n>statusDeliveryFrom}"
+														text="{ToSupplier/Address/City}"
+														/>
+												</secondStatus>
 											</ObjectListItem>
 										</items>
 									</List>
-									<Panel id="productDetailsPanel" headerText="{i18n>panelHeader}" visible="true">
+									<Panel id="productDetailsPanel" headerText="{i18n>panelHeader}" visible="false">
 										<l:Grid>
 											<Text text="{i18n>ProductID}: {ProductID}" />
 											<Text text="{i18n>ProductName}: {Name}" />
