@@ -17,6 +17,17 @@ sap.ui.define([],function(){
 			}
 			
 			return sResult;
+		},
+		formatMapUrl: function(oAddress) {
+			if (oAddress) {
+				var sUrl = "https://maps.googleapis.com/maps/api/staticmap?size=600x600&Address=";
+				var markerParams = "&markers=color:red%7C";
+				var address = oAddress.HouseNumber + "+"+oAddress.Street+"+"+oAddress.ZIPCode+"+"+oAddress.City+"+"+oAddress.Country;
+				sUrl = sUrl + address + markerParams + address;
+				// console.log("address: ",oAddress, "url:", sUrl);
+				// console.log(sUrl);
+				return sUrl;
+			}
 		}
 	};
 });

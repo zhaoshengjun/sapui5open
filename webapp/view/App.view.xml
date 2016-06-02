@@ -1,4 +1,7 @@
-<mvc:View displayBlock="true" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" 
+<mvc:View 
+	displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
 	xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
@@ -71,6 +74,17 @@
 									<Button text="{i18n>layoutPublishButton}" type="Accept" icon="sap-icon://outbox" />
 									<Button text="{i18n>layoutDraftButton}" icon="sap-icon://save" />
 								</Toolbar>
+								<Panel id="mapPanel" headerText="Location">
+									<content>
+										<Image 
+											src="{
+												path: 'address>/',
+												formatter : '.formatter.formatMapUrl'
+											}" 
+											height="600px"
+											/>
+									</content>
+								</Panel>
 							</IconTabFilter>
 							<IconTabFilter 
 								text="{i18n>dataBindingFilter}"
